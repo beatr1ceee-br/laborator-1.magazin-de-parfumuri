@@ -38,27 +38,27 @@ body {
 
 .nav a {
     display: block;
-    color:black;
+    color: white;
     text-decoration: none;
-    padding: 15px;
-    font-size: 17px;
+    padding: 15px 0;
+    font-size: 16px;
     transition: background-color 0.3s ease;
-    border-radius: 5px;
 }
 
 .nav a:hover {
     background-color: #d8bcbc;
+    border-radius: 5px;
 }
 
 
 .hero {
     text-align: center;
-    padding: 25px 20px;
+    padding: 50px 20px;
     background-color: #fde5e6;
 }
 
 .produse {
-    padding: 20px 20px;
+    padding: 40px 20px;
     background-color: #fff;
 }
 
@@ -84,6 +84,10 @@ body {
     object-fit: cover;
 }
 
+.grid p {
+    text-decoration: none;
+}
+
 button {
     margin-top: 10px;
     padding: 8px 15px;
@@ -94,14 +98,7 @@ button {
     border-radius: 5px;
 }
 
-.despre {
-    padding: 40px 20px;
-    background-color: #fde5e6;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.contact {
+.despre, .contact {
     padding: 40px 20px;
     background-color: #fde5e6;
     text-align: center;

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Givenchy L’Interdit Eau de Parfum Rouge</title>
+  <title>Xerjoff Newceuls Eau de Parfum</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -31,7 +31,7 @@
 
     .thumbnails img:hover,
     .thumbnails img.active {
-      border: 2px solid #b30000;
+      border: 2px solid #5c2c06;
     }
 
     .main-image img {
@@ -40,13 +40,12 @@
     }
 
     .info {
-    display: flex;
-    flex-direction: column;     /* Elemente una sub alta */
-    align-items: center;        /* Centrează pe orizontală */
-    justify-content: center;    /* Centrează pe verticală */
-    height: 100%;               /* Important pentru a funcționa centrare verticală */
-}
-
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
 
     h1 {
       font-size: 24px;
@@ -58,7 +57,7 @@
 
     .price {
       font-size: 20px;
-      color: #b30000;
+      color: #5c2c06;
       font-weight: bold;
       margin-top: 10px;
     }
@@ -71,7 +70,7 @@
     }
 
     .btn {
-      background-color: #b30000;
+      background-color: #5c2c06;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -81,7 +80,7 @@
     }
 
     .btn:hover {
-      background-color: #800000;
+      background-color: #3e1f04;
     }
 
     .section {
@@ -93,6 +92,7 @@
       font-size: 18px;
       margin-bottom: 10px;
     }
+
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -117,62 +117,61 @@
 </head>
 <body>
 
-<h1>Givenchy L’Interdit Eau de Parfum Rouge</h1>
+<h1>Xerjoff Newceuls Eau de Parfum</h1>
 
 <div class="container">
   <div class="thumbnails">
-    <img src="images\givenchy 1.jpeg" onclick="schimbaImagine(this)" class="active">
-    <img src="images\givenchy 2.jpeg" onclick="schimbaImagine(this)">
-    <img src="images\givenchy 3.jpeg" onclick="schimbaImagine(this)">
-    <img src="images\givenchy 4.jpeg" onclick="schimbaImagine(this)">
+    <img src="images\xerjoff.jpg" onclick="schimbaImagine(this)" class="active">
+    <img src="images\xerjoff_1.jpg" onclick="schimbaImagine(this)">
+    <img src="images\xerjoff_2.jpg" onclick="schimbaImagine(this)">
   </div>
 
   <div class="main-image">
-    <img id="imagine-principala" src="images\Imagine 3.jpeg" alt="Parfum Givenchy">
+    <img id="imagine-principala" src="images/xerjoff.jpg" alt="Xerjoff Newceuls Eau de Parfum">
   </div>
 
   <div class="info">
-    <p><strong>Brand:</strong> Givenchy</p>
-    <p><strong>Tip:</strong> Apă de parfum pentru femei</p>
+    <p><strong>Brand:</strong> Xerjoff</p>
+    <p><strong>Tip:</strong> Apă de parfum unisex</p>
 
     <label for="volum">Alege volumul:</label>
     <select id="volum" onchange="actualizeazaPretul()">
-      <option value="35">35 ml</option>
+      <option value="30">30 ml</option>
       <option value="50">50 ml</option>
-      <option value="80">80 ml</option>
+      <option value="100">100 ml</option>
     </select>
 
     <div class="price">
-      <span id="pret-curent">339,00 RON</span>
-      <span class="old-price" id="pret-vechi">433,00 RON</span>
+      <span id="pret-curent">489,00 RON</span>
+      <span class="old-price" id="pret-vechi">565,00 RON</span>
     </div>
 
-    <button class="btn">Adaugă în coș</button>
+    <button class="btn" onclick="adaugaInCos()">Adaugă în coș</button>
   </div>
 </div>
 
 <div class="section">
   <h2>Descriere</h2>
   <p>
-    L’Interdit Eau de Parfum Rouge de la Givenchy este o reinterpretare senzuală și intensă a parfumului clasic. 
-    Această variantă roșie adaugă un aer de mister și eleganță. Parfumul este o invitație de a trece granițele și a descoperi tentația interzisă.
+    Xerjoff Newceuls este un parfum sofisticat, ce combină rafinamentul italian cu note orientale prețioase. 
+    Acest elixir olfactiv este destinat celor care își doresc să iasă din tipare și să lase o amprentă memorabilă în urma lor.
   </p>
 </div>
 
 <div class="section">
   <h2>Ingrediente</h2>
   <p>
-    Note de vârf: ghimbir, portocală roșie<br>
-    Note de mijloc: floare de portocal, tuberoză<br>
-    Note de bază: lemn de santal, patchouli
+    Note de vârf: bergamotă, șofran<br>
+    Note de mijloc: iasomie, ambră<br>
+    Note de bază: mosc alb, lemn de cedru, oud
   </p>
 </div>
 
 <script>
   const preturi = {
-    35: { curent: "339,00 RON", vechi: "433,00 RON" },
-    50: { curent: "505,00 RON", vechi: "597,00 RON" },
-    80: { curent: "583,00 RON", vechi: "725,00 RON" }
+    30: { curent: "489,00 RON", vechi: "565,00 RON" },
+    50: { curent: "679,00 RON", vechi: "749,00 RON" },
+    100: { curent: "899,00 RON", vechi: "995,00 RON" }
   };
 
   function actualizeazaPretul() {
@@ -185,9 +184,12 @@
     const imaginePrincipala = document.getElementById("imagine-principala");
     imaginePrincipala.src = img.src;
 
-   
     document.querySelectorAll('.thumbnails img').forEach(el => el.classList.remove("active"));
     img.classList.add("active");
+  }
+
+  function adaugaInCos() {
+    alert("Produsul a fost adăugat în coș!");
   }
 </script>
 
