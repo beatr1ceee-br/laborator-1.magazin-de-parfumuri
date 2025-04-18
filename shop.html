@@ -12,12 +12,64 @@
       padding: 0;
     }
 
-    header {
-      background: #e7dada;
+    .title {
+      background-color: #e7dada;
       color: black;
-      padding: 20px;
+      padding-bottom: 20px;
       text-align: center;
     }
+
+    .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    background-color: #e7dada;
+    padding: 10px 20px;
+    font-family: 'Times New Roman', sans-serif;
+  }
+
+  .home_bttn{
+    text-decoration: none;
+    color: #333;
+  }
+
+  .header h1 {
+    margin: 0;
+    text-align: center;
+  } 
+
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav li {
+    display: inline;
+  }
+
+  .nav a {
+    display: block;
+    color:black;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+
+  .nav a:hover {
+    background-color: #d8bcbc;
+  }
 
     h1 {
       margin: 0;
@@ -52,6 +104,7 @@
       text-align: center;
       transition: all 0.3s ease;
       cursor: pointer;
+      border: 1px solid white
     }
 
     .card h3 {
@@ -67,16 +120,29 @@
     }
 
     /* Efectul de accent când e selectat */
-    .card.selected {
+    .card:hover {
       box-shadow: 0 0 20px rgba(92, 44, 6, 0.5);
-      border: 2px solid #5c2c06;
-      transform: scale(1.03);
+      border: 1px solid #5c2c06;
     }
   </style>
 </head>
 <body>
 
-<header>
+  <header class="header">
+    <a class="home_bttn" href="index.html">
+      <h1>Essenza</h1>
+    </a>
+    <div class="hamburger"></div>
+    <nav class="nav" id="menu">
+        <ul>
+            <li><a href="shop.html">Produse</a></li>
+            <li><a href="despre.html">Despre noi</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<header class="title">
   <h1>🌸 Niche and luxury perfumery</h1>
 </header>
 
